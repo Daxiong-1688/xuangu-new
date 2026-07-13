@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Xuangu Final Run Bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["metadata", "market_map", "forecast", "stock_pools", "risk_audit", "evidence"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["schema_version", "resolved_trading_date", "generated_at", "data_source", "validation_status"],
+      "additionalProperties": true
+    },
+    "market_map": {
+      "type": "object",
+      "required": ["core_conclusion", "regime", "risk_score", "five_dimensions", "decision_conflict", "indices", "breadth", "industries", "dynamic_sector_scope", "decision_matrix", "sector_attribution", "fund_migration", "lifecycle", "daily_validation", "events", "data_gaps"],
+      "additionalProperties": true
+    },
+    "forecast": {
+      "type": "object",
+      "required": ["base_case", "confidence", "horizons", "scenarios", "sector_ranking", "fund_path", "market_rhythm", "invalidation_signals"],
+      "additionalProperties": true
+    },
+    "stock_pools": {
+      "type": "object",
+      "required": ["environment", "sector_mapping", "score_model", "candidate", "watch", "core", "company_comparison", "formal_top5"],
+      "additionalProperties": true
+    },
+    "risk_audit": {
+      "type": "object",
+      "required": ["critical_complete", "items", "missing_fields"],
+      "additionalProperties": true
+    },
+    "evidence": {"type": "array"}
+  }
+}

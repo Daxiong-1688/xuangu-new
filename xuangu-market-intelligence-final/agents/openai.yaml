@@ -1,0 +1,4 @@
+interface:
+  display_name: "玄谷市场研究控制台"
+  short_description: "实时Yixin市场地图、条件预测与风险门控三层选股"
+  default_prompt: "Use $xuangu-market-intelligence-final to generate today’s complete Yixin-driven 玄谷 market research console and return all four validated HTML pages."

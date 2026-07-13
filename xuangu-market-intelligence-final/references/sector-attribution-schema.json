@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["sector", "selection_reason", "market_facts", "primary_reason", "secondary_reasons", "price_and_chips", "fund_behavior", "catalyst", "industry_transmission", "fundamental_confirmation", "macro_transmission", "alternative_explanations", "nature", "confidence", "continuation_conditions", "invalidating_signals", "evidence_ids"],
+  "properties": {
+    "sector": {"type": "string"},
+    "selection_reason": {"enum": ["leader", "laggard", "strengthening", "abnormal_volume", "divergence"]},
+    "market_facts": {"type": "object"},
+    "primary_reason": {"type": "string"},
+    "secondary_reasons": {"type": "array"},
+    "price_and_chips": {"type": "string"},
+    "fund_behavior": {"type": "string"},
+    "catalyst": {"type": "string"},
+    "industry_transmission": {"type": "string"},
+    "fundamental_confirmation": {"type": "string"},
+    "macro_transmission": {"type": "string"},
+    "alternative_explanations": {"type": "array", "minItems": 1},
+    "nature": {"enum": ["产业趋势", "事件驱动", "超跌反弹", "风格轮动", "获利兑现", "基本面重估", "宏观传导", "风险扩散", "数据不足"]},
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "continuation_conditions": {"type": "array", "minItems": 1},
+    "invalidating_signals": {"type": "array", "minItems": 1},
+    "evidence_ids": {"type": "array", "minItems": 1}
+  }
+}
+
